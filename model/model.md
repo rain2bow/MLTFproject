@@ -19,7 +19,7 @@ weighted avg       1.00      0.93      0.96   1272524
 ROC AUC Score:
 0.9163596546446227
 
-![uncleaned_lr](uncleaned_lr.png)
+![uncleaned_lr](former pics/uncleaned_lr.png)
 
 ## SVM
 
@@ -40,7 +40,7 @@ weighted avg       1.00      0.92      0.96   1272524
 ROC AUC Score:
 0.9298886955019715
 
-![uncleaned_svm](uncleaned_svm.png)
+![uncleaned_svm](former pics/uncleaned_svm.png)
 
 ## GBM
 
@@ -61,7 +61,7 @@ weighted avg       1.00      0.96      0.98   1272524
 ROC AUC Score:
 0.9623112267546706
 
-![uncleaned_gbm](uncleaned_gbm.png)
+![uncleaned_gbm](former pics/uncleaned_gbm.png)
 
 ## random forest
 
@@ -90,7 +90,7 @@ weighted avg       1.00      0.95      0.97   1272524
 ROC AUC Score:
 0.956185550807463
 
-![uncleaned_rf](uncleaned_rf.png)
+![uncleaned_rf](former pics/uncleaned_rf.png)
 
 ## ANN
 
@@ -111,7 +111,7 @@ weighted avg       1.00      0.99      1.00   1272524
 ROC AUC Score:
 0.9449562059781665
 
-![uncleaned_ann](uncleaned_ann.png)
+![uncleaned_ann](former pics/uncleaned_ann.png)
 
 # use uncleaned_imbalanced_train_dataset as train set to compare
 
@@ -133,7 +133,7 @@ weighted avg       1.00      1.00      1.00   1272524
 ROC AUC Score:
 0.8957910571085557
 
-![imbalance_lr](imbalance_lr.png)
+![imbalance_lr](former pics/imbalance_lr.png)
 
 ## GBM
 
@@ -153,7 +153,7 @@ weighted avg       1.00      1.00      1.00   1272524
 ROC AUC Score:
 0.7688617270217172
 
-![imbalance_gbm](imbalance_gbm.png)
+![imbalance_gbm](former pics/imbalance_gbm.png)
 
 ##### About hypermeters, I tried grid search but it didn't make so much difference.
 
