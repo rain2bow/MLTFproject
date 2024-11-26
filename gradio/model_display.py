@@ -34,20 +34,24 @@ def predict_fraud(model_name, step, amount, transaction_type):
 
     # 获取选择的模型
     model = models[model_name]
-
+    result = ""
     # 预测
     prediction = model.predict(data)[0]
     try:
-        probability = model.predict_proba(data)[0][1]
+        if prediction==1 or prediction==0:
+            probability = model.predict_proba(data)[0][1]
 
-        # 返回结果
-        result = f"prediction result: {'fraud' if prediction == 1 else 'non-fraud'}\n"
-        result += f"fraud probability: {probability:.2%}"
+            # 返回结果
+            result = f"prediction result: {'fraud' if prediction == 1 else 'non-fraud'}\n"
+            result += f"fraud probability: {probability:.2%}"
+        else:
+            probability = model.predict(data)[0][0]
+            prediction = (probability > 0.15).astype(int)
+            result = f"prediction result: {'fraud' if prediction == 1 else 'non-fraud'}\n"
+            result += f"fraud probability: {probability:.2%}"
     except Exception as e:
         print(e)
-        gr.Info("this model does not support probability")
-        result = f"prediction result: {'fraud' if prediction == 1 else 'non-fraud'}\n"
-
+        gr.Info(f"{e}")
     return result
 
 
